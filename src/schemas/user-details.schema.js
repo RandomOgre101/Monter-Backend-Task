@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+/* Rishikeshav Ravichandran */
+
 const userDetailSchema = new mongoose.Schema(
   {
     user: {

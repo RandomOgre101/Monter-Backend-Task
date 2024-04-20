@@ -42,7 +42,7 @@ const updateUserDetail = async (req, res) => {
     const isUserDetailExist = await UserDetail.findOne({ user: user._id });
 
     if (!isUserDetailExist)
-      return responseHandler(res).error(400, "Your details doesn't exist");
+      return responseHandler(res).error(400, "Your details don't exist");
 
     const userDetail = await UserDetail.findOneAndUpdate(
       { user: user._id },
@@ -67,7 +67,7 @@ const getUserDetail = async (req, res) => {
     );
 
     if (!userDetail)
-      return responseHandler(res).error(400, "Your details doesn't exist");
+      return responseHandler(res).error(400, "Your details don't exist");
 
     return responseHandler(res).success(200, "User details updated", {
       userDetail,
